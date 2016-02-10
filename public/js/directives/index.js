@@ -1,6 +1,6 @@
-require('angular').module('webglRocks')
-/*
-    .controller('HomeController', require('./HomeController'))
-    .controller('AboutMeController', require('./AboutMeController'))*/;
+'use strict';
 
+require('angular').module('main-app')
 
+    .directive('appFooter', require('./app-footer'))
+    .directive('appNavbar', require('./app-navbar'));

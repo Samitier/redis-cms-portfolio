@@ -1,7 +1,9 @@
 var angular = require('angular');
 require('angular-route');
 
-var app = angular.module('webglRocks', ['ngRoute'])
+window.$ = window.jQuery = require('jquery');
+
+var app = angular.module('main-app', ['ngRoute'])
 
     .constant('VERSION', require('../../package.json').version)
 

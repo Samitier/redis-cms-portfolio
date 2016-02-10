@@ -1,4 +1,4 @@
-require('angular').module('webglRocks')
+require('angular').module('main-app')
 
     .controller('HomeController', require('./HomeController'))
     .controller('PageController', require('./PageController'))
