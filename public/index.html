@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es" ng-app="webglRocks">
+<head>
+    <title ng-bind="'WebGl Rocks! - ' + pageTitle">WebGl Rocks!</title>
+    <base href="/">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="{{pageDescription||'Another web made with Redis CMS.'}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <ng-view></ng-view>
+    <script src="bundle.js"></script>
+</body>
