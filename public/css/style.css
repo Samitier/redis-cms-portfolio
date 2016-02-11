@@ -16,3 +16,13 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+#container {
+    width: 80%;
+    margin: auto;
+}
+.item {
+    background: rgb(135, 199, 135);
+    width: 320px;
+    height: 320px;
+}
