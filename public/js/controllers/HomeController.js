@@ -7,10 +7,10 @@ module.exports= function(BlogAPI, $rootScope, $scope) {
             $scope.page = dat.data;
         });
 
-        var temp = "<div class='cell' style='background-color:red; width:{width}px; height: {height}px; background-image: url(i/photo/{index}.jpg)'></div>";
-        var w = 200, h = 200, html = '', limitItem = 49;
+        var temp = "<div class='cell' style='background-color:red; width:{width}px; height: {height}px; background-size: cover; background-image: url(/img/{index}.jpg)'></div>";
+        var w = 300, h = 300, html = '', limitItem = 49;
         for (var i = 0; i < limitItem; ++i) {
-            html += temp.replace(/\{height\}/g, h).replace(/\{width\}/g, w).replace("{index}", i + 1);
+            html += temp.replace(/\{height\}/g, h).replace(/\{width\}/g, w).replace("{index}", i%8);
         }
         $("#freewall").html(html);
 
@@ -20,8 +20,8 @@ module.exports= function(BlogAPI, $rootScope, $scope) {
             animate: true,
             cellW: 200,
             cellH: 200,
-            gutterY: 1,
-            gutterX: 1,
+            gutterY: 0,
+            gutterX: 0,
             onResize: function() {
                 wall.refresh();
             }
@@ -29,6 +29,7 @@ module.exports= function(BlogAPI, $rootScope, $scope) {
         wall.fitWidth();
         // for scroll bar appear;
         $(window).trigger("resize");
+
     }
     this.init();
 }
