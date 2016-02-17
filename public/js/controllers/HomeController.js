@@ -17,7 +17,7 @@ module.exports= function(BlogAPI, $rootScope, $scope) {
         var wall = new Freewall("#freewall");
         wall.reset({
             selector: '.cell',
-            animate: true,
+            animate: false,
             cellW: 200,
             cellH: 200,
             gutterY: 0,
@@ -30,6 +30,7 @@ module.exports= function(BlogAPI, $rootScope, $scope) {
         // for scroll bar appear;
         $(window).trigger("resize");
 
+        $('.scrollspy').scrollSpy();
+
     }
-    this.init();
 }

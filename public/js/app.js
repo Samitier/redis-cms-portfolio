@@ -66,7 +66,7 @@ var app = angular.module('main-app', ['ngRoute'])
         $rootScope.pageDescription = "";
         $rootScope.$on('$routeChangeError', function (event, current, previous, error) {
             if (error.status === 404) {
-                $location.path('/404');
+                $location.path('/');
             }
         });
     });
