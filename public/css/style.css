@@ -26,3 +26,12 @@ main {
     margin-top:1em;
     margin-bottom:1em;
 }
+
+.cell {
+    cursor:pointer;
+    transition: opacity 0.5s;
+}
+
+.cell:hover {
+    opacity:0.4!important;
+}
